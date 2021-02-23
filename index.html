@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lab_4 - Map Design and Tiles Generation</title>
+  <title>Lab_4 - Map Design and Tiles Generation </title>
   <meta charset="utf-8" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,33 +32,47 @@
 var map = L.map('map').setView([47.6002614, -122.3189435], 12);
 
 var carto_dark = L.tileLayer('http://a.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png', {
-    maxZoom: 21,
+  minZoom: 5,
+  maxZoom: 15,
     attribution: 'Cartographer: Richard Dait | GEOG 458 | Basemap by Carto'
   }).addTo(map);
 
 var google = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-    maxZoom: 21,
+  minZoom: 5,
+  maxZoom: 15,
     attribution: 'Cartographer: Richard Dait | GEOG 458 | Basemap by Google'
   });
 
 var carto_light = L.tileLayer('http://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.pngS', {
-      maxZoom: 21,
+  minZoom: 5,
+  maxZoom: 15,
       attribution: 'Cartographer: Richard Dait | Basemap by Cartocdn | GEOG 468'
     });
 
 var mapbox = L.tileLayer('assets/Mapbox/{z}/{x}/{y}.png', {
-  maxZoom: 21,
-  attribution: 'Cartographer: Richard Dait | GEOG 458 | First Tile Set: Basemap Designed Mapbox'});
+  minZoom: 5,
+  maxZoom: 15,
+  attribution: 'Cartographer: Richard Dait | GEOG 458 | First Tile Set: Basemap Designed Mapbox',
+  detectRetina: true
+});
 
   var socioeconomic_light = L.tileLayer('assets/Socioeconomic_Index_2nd/{z}/{x}/{y}.png', {
-    maxZoom: 21,
-    attribution: 'Cartographer: Richard Dait | GEOG 458 | Second Tile Set - Socioeconomic Index | Shapefile Provided by Seattle Open GeoData and ArcGIS | Basemap by Wikimedia'});
+    minZoom: 5,
+    maxZoom: 15,
+    attribution: 'Cartographer: Richard Dait | GEOG 458 | Second Tile Set - Socioeconomic Index | Shapefile Provided by Seattle Open GeoData and ArcGIS | Basemap by Wikimedia',
+    detectRetina: true
+  });
 
 var socioeconomic_dark = L.tileLayer('assets/Socioeconomic_Index/{z}/{x}/{y}.png', {
-  maxZoom: 21,
-  attribution: 'Cartographer: Richard Dait | GEOG 458 | Third Tile Set - Socioeconomic Index | Shapefile Provided by Seattle Open GeoData and ArcGIS | Basemap by Carto (Dark No Labels)'});
+  minZoom: 5,
+  maxZoom: 15 ,
+  attribution: 'Cartographer: Richard Dait | GEOG 458 | Third Tile Set - Socioeconomic Index | Shapefile Provided by Seattle Open GeoData and ArcGIS | Basemap by Carto (Dark No Labels)',
+  detectRetina: true
+});
 
 var seahawks = L.tileLayer('assets/Seahawks/{z}/{x}/{y}.png', {
+  minZoom: 9,
+  maxZoom: 15,
   attribution: 'Cartographer: Richard Dait | GEOG 458 | Fourth Tile Set: Home of the Seahawks | Designed via Mapbox',
   detectRetina: true });
 
