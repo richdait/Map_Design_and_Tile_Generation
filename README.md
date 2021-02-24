@@ -12,13 +12,13 @@
 <h4> <b> Discussion and Illustrations</b> </h4>
 <p align="left"> <h5>Below are screenshots of the four layers. The first tile set is a basemap of Seattle designed by MapBox Studio. A dark monochromatic color scheme was chosen to illustrate the geographic study area. A few changes were made to make it more visually pleasing. One includes the color of the waterway and another is the inclusion of cap icons at universities. For the second tile set, it displays the socialeconomic index percentile of residents in Seattle. Data source was curated through American Community Survey estimates from 2011 - 2015. Darkest shade of red-brown indicate that residents living in those census tracts, are extremely socioeconomically disadvantaged. Measures are based off of income level being below the 200% poverty level and having less than a bachelor's degree. The third tile set contains the same data as the prior layer, however, it is overlaid on the MapBox basemap. For the last tile set and map, it illustrates the city's love for the home team. The map was designed through MapBox, with three hex codes changed to align the Seahawks' colors. Additionally, the word Seattle was altered and replaced with a greeting to welcome the reader. This was done by changing the layer driving the Seattle value - settlement major label.</h5>
 
-![alt text](img/mapbox_basemap.jpg)
+![alt text](img/mapbox_basemap.png)
 </br>
 </br>
-![alt text](img/thematic_geospatial.jpg)
+![alt text](img/thematic_geospatial.png)
 </br>
 </br>
-![alt text](img/thematic_with_mapbox.jpg)
+![alt text](img/thematic_with_mapbox.png)
 </br>
 </br>
-![alt text](img/seahawks.jpg)
+![alt text](img/seahawks.png)
