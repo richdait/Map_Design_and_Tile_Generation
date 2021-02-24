@@ -40,7 +40,13 @@ var google = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
    attribution: 'Cartographer: Richard Dait | GEOG 458 | Basemap by Google'
    });
 
-var mapbox = L.tileLayer('assets/Mapbox/{z}/{x}/{y}.png', {
+var carto_light = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+  attribution: 'Cartographer: Richard Dait | GEOG 458 | Basemap by Carto'
+  });
+
+var seattle_mapbox = L.tileLayer('assets/Mapbox/{z}/{x}/{y}.png', {
+    minZoom: 3,
+    maxZoom: 15,
     attribution: 'Cartographer: Richard Dait | GEOG 458 | First Tile Set: Monochromatic Basemap with Icons and Changes to Color and Label Fonts | Designed via Mapbox',
     detectRetina: true
   });
@@ -66,12 +72,13 @@ var seahawks = L.tileLayer('assets/Seahawks/{z}/{x}/{y}.png', {
   detectRetina: true });
 
   var baseLayers = {
-   'Dark Carto': carto_dark,
+   'Carto Dark': carto_dark,
     'Google': google,
-    'Mapbox': mapbox
+    'Carto Light': carto_light
   };
 
    var overlays = {
+      "Seattle Basemap": seattle_mapbox,
       "Socioeconomic Index Percentile": socioeconomic_light,
       "Socioeconomic Index Percentile with Mapbox Basemap": socioeconomic_mapbox,
       "Seahawks": seahawks
